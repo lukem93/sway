@@ -72,9 +72,7 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
 
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
+    # You can split the current focussed object with $mod+b or $mod+v, for horizontal and vertical split respectively.
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
@@ -100,8 +98,7 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
 
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
+    # Show the next scratchpad window or hide the focused one. If there are multiple scratchpad windows, cycle through them.
     bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
@@ -130,4 +127,4 @@ default_border pixel
 #client.focused #000000 #002b36 #ffffff #2e9ef4 #93a1a1
 #client.unfocused #000000 #002b36 #ffffff #2e9ef4 #586e75
 
-include /etc/sway/config.d/*
+#include /etc/sway/config.d/*
