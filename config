@@ -9,11 +9,10 @@ set $right l
 set $term foot
 set $browser google-chrome-stable
 set $editor nvim
+set $ide code --ozone-platform=wayland
 
-output HDMI-A-1 pos 0,0 res 1920x1080 
-output DP-2 pos 1920,0 res 1920x1080
-
-output HDMI-A-1 adaptive_sync on
+output HDMI-A-1 mode 1920x1080@60.000Hz position 0,0 
+output DP-2 mode 1920x1080@60.000Hz position 1920,0
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -28,7 +27,7 @@ output HDMI-A-1 adaptive_sync on
     bindsym $mod+Return splitt; exec $term
     bindsym $mod+g splitt; exec $browser
     bindsym $mod+t exec foot $editor
-    bindsym $mod+c exec code
+    bindsym $mod+c exec "code --ozone-platform=wayland"
     bindsym $mod+q kill
     
     # Drag floating windows by holding down $mod and left mouse button.
@@ -124,13 +123,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-# Utilities:
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     bindsym Print exec grim
 
 default_border pixel
