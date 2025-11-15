@@ -15,12 +15,6 @@ set $filemanager pcmanfm
 output HDMI-A-1 mode 1920x1080@60.000Hz position 0,0 
 output DP-2 mode 1920x1080@60.000Hz position 1920,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-# This locks your screen after 300 seconds of inactivity, then turns off displays after another 300 seconds, 
-# and tursns your screens back on when resumed. It will also lock your screen before your computer goes to sleep.
 
 ## Key bindings
     bindsym $mod+Return splitt; exec $term
@@ -127,5 +121,3 @@ default_border pixel
 smart_borders on
 #client.focused #000000 #002b36 #ffffff #2e9ef4 #93a1a1
 #client.unfocused #000000 #002b36 #ffffff #2e9ef4 #586e75
-
-#include /etc/sway/config.d/*
