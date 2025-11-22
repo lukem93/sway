@@ -24,8 +24,7 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     bindsym $mod+e exec $filemanager
     bindsym $mod+q kill
     
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
+    # Resize them with right mouse button + $mod, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
@@ -110,10 +109,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
-    bindsym Print exec grim
 
 default_border pixel
 smart_borders on
-#client.focused #000000 #002b36 #ffffff #2e9ef4 #93a1a1
-#client.unfocused #000000 #002b36 #ffffff #2e9ef4 #586e75
