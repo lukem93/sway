@@ -24,7 +24,6 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     bindsym $mod+e exec $filemanager
     bindsym $mod+q kill
     
-    # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
@@ -65,7 +64,6 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     # Note: workspaces can have any name you want, not just numbers.
 
 # Layout stuff:
-#
     # You can split the current focussed object with $mod+b or $mod+v, for horizontal and vertical split respectively.
     bindsym $mod+b splith
     bindsym $mod+v splitv
@@ -88,7 +86,6 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     bindsym $mod+a focus parent
 #
 # Scratchpad:
-#
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
 
@@ -97,7 +94,6 @@ output DP-2 mode 1920x1080@60.000Hz position 1920,0
     bindsym $mod+grave scratchpad show
 #
 # Resizing containers:
-#
 mode "resize" {
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
