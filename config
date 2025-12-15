@@ -1,3 +1,6 @@
+xwayland disable
+swaybg_command -
+
 set $mod Mod4
 
 # Home row direction keys, like vim
@@ -7,12 +10,12 @@ set $up k
 set $right l
 
 set $term foot
-set $browser google-chrome-stable
+set $browser google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland
 set $editor nvim
 set $ide code --ozone-platform=wayland
 set $filemanager pcmanfm
 
-output HDMI-A-1 mode 1920x1080@60.000Hz position 0,0 
+output HDMI-A-1 mode 1920x1080@100.000Hz position 0,0 
 output DP-2 mode 1920x1080@60.000Hz position 1920,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
